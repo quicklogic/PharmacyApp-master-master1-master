@@ -32,9 +32,7 @@ namespace PharmacyApp.ViewModels
         public ICommand BackCommand { protected set; get; }
         public ICommand SearchCommand { get; set; }
         public ICommand CategoryFilter { get; set; }
-
         public ICommand CategoryCommand { get; set; }
-
         public ICommand FiltersCommand { get; set; }
         public INavigation Navigation { get; set; }
 
@@ -70,6 +68,7 @@ namespace PharmacyApp.ViewModels
             BackCommand = new Command(Back);
             FiltersCommand = new Command(Filters);
             CategoryCommand = new Command(Category);
+            TextChangndCommand = new Command(TextChanged);
         }
 
         void Category()
