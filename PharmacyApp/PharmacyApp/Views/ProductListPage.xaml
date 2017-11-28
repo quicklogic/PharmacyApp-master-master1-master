@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PharmacyApp.Views.ProductListPage" Title="Список продуктов:">
+             x:Class="PharmacyApp.Views.ProductListPage" Title="Список продуктов:"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="Search" Icon="icon.png" Text="Search" Command="{Binding SearchCommand}"/>
@@ -20,8 +21,7 @@
                     <Button Text="Тип"  TextColor="White" BackgroundColor="#81C784" BorderRadius="1000" BorderColor="White"/>
                     <Button Text="Цена"  TextColor="White" BackgroundColor="#81C784" BorderRadius="1000" BorderColor="White"/>
                     <Button Text="Наличие" TextColor="White" BackgroundColor="#81C784" BorderRadius="1000" BorderColor="White"/>
-                    <Picker ItemsSource="{Binding col}" IsVisible="{Binding PickerEnable}" />
-
+                    <Picker Title="Категория" BackgroundColor="#81C784"  ItemsSource="{Binding Product, Mode=TwoWay}" />
                 </StackLayout> 
           </ScrollView>
         </StackLayout>
