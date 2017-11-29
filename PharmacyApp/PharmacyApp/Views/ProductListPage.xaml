@@ -9,7 +9,7 @@
     </ContentPage.ToolbarItems>
     <StackLayout BackgroundColor="White">
         <StackLayout IsVisible="{Binding SearchVisible}">
-            <SearchBar Placeholder="Введите название продукта..." TextChanged="{Binding TextChangndCommand}" BackgroundColor="White">
+            <SearchBar Placeholder="Введите название продукта..." TextChanged="SearchBar_OnTextChanged" BackgroundColor="White">
             </SearchBar>
             <Button Text="Фильтры" Command="{Binding FiltersCommand}" TextColor="White" BackgroundColor="#81C784" BorderRadius="1000" BorderColor="White"/>
         </StackLayout>

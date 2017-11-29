@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PharmacyApp.Views.LoginPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+    <StackLayout>
+        <Label Text="Логин:"/>
+        <Entry Text="{Binding Path=Login}" Keyboard="Default" Placeholder="Введите ваш логин"/>
+        <Label Text="Пароль:"/>
+        <Entry Text="{Binding Path=Password}" Keyboard="Default" Placeholder="Введите ваш пароль" IsPassword="True"/>
+        <Button Command="{Binding NextCommand}" Text="Войти" TextColor="White" BackgroundColor="#81C784" BorderRadius="1000" BorderColor="White" />
+    </StackLayout>
+
+  </ContentPage>

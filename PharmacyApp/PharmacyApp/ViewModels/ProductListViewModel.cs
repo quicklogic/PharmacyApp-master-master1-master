@@ -1,5 +1,5 @@
 ﻿using PharmacyApp.Models;
-using PharmacyApp.Utility;
+using PharmacyApp.Models;
 using PharmacyApp.Views;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,16 +13,13 @@ namespace PharmacyApp.ViewModels
 {
     public class ProductListViewModel : INotifyPropertyChanged
     {
-        bool initialized = false;   // была ли начальная инициализация
-        Product selectedProduct;  // выбранный друг
-        private bool isBusy;    // идет ли загрузка с сервера
+        bool initialized = false;   
+        Product selectedProduct;  
+        private bool isBusy;    
         private bool filtersVisible;
         private bool searchVisible;
         private bool pickerEnable;
-        public ObservableCollection<int> col = new ObservableCollection<int>();
-       
-           
-
+ 
        
         public ObservableCollection<Product> Products { get; set; }
         PharmacyService pharmacyService = new PharmacyService();
@@ -55,10 +52,6 @@ namespace PharmacyApp.ViewModels
 
         public ProductListViewModel()
         {
-            for (int i = 0; i < 5; i++)
-            {
-                col.Add(i);
-            }
             SearchCommand = new Command(Search);
             Products = new ObservableCollection<Product>();
             IsBusy = false;
@@ -68,7 +61,6 @@ namespace PharmacyApp.ViewModels
             BackCommand = new Command(Back);
             FiltersCommand = new Command(Filters);
             CategoryCommand = new Command(Category);
-            TextChangndCommand = new Command(TextChanged);
         }
 
         void Category()

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PharmacyApp.Models;
+using PharmacyApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +13,11 @@ namespace PharmacyApp.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RegistrationPage : ContentPage
-	{
-		public RegistrationPage ()
+    {
+        public RegistrationPage ()
 		{
+            RegistrationViewModel vm = new RegistrationViewModel();
+            BindingContext = vm;
 			InitializeComponent ();
 		}
 	}
