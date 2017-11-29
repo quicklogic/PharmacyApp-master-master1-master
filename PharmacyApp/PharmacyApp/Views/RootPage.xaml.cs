@@ -15,7 +15,6 @@ namespace PharmacyApp.Views
     {
         public RootPage()
         {
-            BindingContext = new RootViewModel();
             InitializeComponent();
             MasterBehavior = MasterBehavior.Popover;
         }

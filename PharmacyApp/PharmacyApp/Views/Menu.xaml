@@ -10,13 +10,13 @@
         <StackLayout BackgroundColor="#81C784">
             <Image Source="icon.png" WidthRequest="150" HeightRequest="150"/>
             <Button Text="Главная страница" TextColor="#81C784" BackgroundColor="White" BorderRadius="1000"  Command="{Binding GoHomeCommand}" />
-            <Button Text="Профиль" TextColor="#81C784" BackgroundColor="White" BorderRadius="67" Command="{Binding GoUserProfile}" />
+            <Button Text="Профиль" TextColor="#81C784" BackgroundColor="White" BorderRadius="67" Command="{Binding GoUserProfileCommand}" />
             <Button Text="Заказы" TextColor="#81C784" BackgroundColor="White" BorderRadius="67" Command="{Binding GoUserProfile}" />
             <Button Text="Информация" TextColor="#81C784" BackgroundColor="White" BorderRadius="67" Command="{Binding GoUserProfile}" />
             <Button Text="Настройки" TextColor="#81C784" BackgroundColor="White" BorderRadius="67" Command="{Binding GoUserProfile}" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
-                <Button Text="Войти"  TextColor="#81C784" BackgroundColor="White" BorderRadius="1000"/>
-                <Button Text="Регистрация"  TextColor="#81C784" BackgroundColor="White" BorderRadius="1000"/>
+                <Button Text="Войти"  TextColor="#81C784" BackgroundColor="White" BorderRadius="1000" Command="{Binding GoLoginCommand}"/>
+                <Button Text="Регистрация"  TextColor="#81C784" BackgroundColor="White" BorderRadius="1000" Command="{Binding GoRegisterCommand}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

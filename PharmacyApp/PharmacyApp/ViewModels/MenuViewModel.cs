@@ -16,14 +16,19 @@ namespace PharmacyApp.ViewModels
     {
 
         public ICommand GoHomeCommand { get; set; }
-        public ICommand GoUserProfile { get; set; }
+        public ICommand GoUserProfileCommand { get; set; }
+        public ICommand GoRegisterCommand { get; set; }
+        public ICommand GoLoginCommand { get; set; }
 
         public MenuViewModel()
         {
             
             GoHomeCommand = new Command(GoHome);
-            GoUserProfile = new Command(GoSecond);
+            GoUserProfileCommand = new Command(GoSecond);
+            GoRegisterCommand = new Command(Register);
+            GoLoginCommand = new Command(Login);
         }
+
 
         void GoHome(object obj)
         {
@@ -34,6 +39,18 @@ namespace PharmacyApp.ViewModels
         void GoSecond(object obj)
         {
             App.NavigationPage.Navigation.PushAsync(new ProductListPage());
+            App.MenuIsPresented = false;
+        }
+
+        void Register()
+        {
+            App.NavigationPage.Navigation.PushAsync(new RegistrationPage());
+            App.MenuIsPresented = false;
+        }
+
+        void Login()
+        {
+            App.NavigationPage.Navigation.PushAsync(new LoginPage());
             App.MenuIsPresented = false;
         }
     }
